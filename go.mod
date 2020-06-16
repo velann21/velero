@@ -12,6 +12,7 @@ require (
 	github.com/aws/aws-sdk-go v1.13.12
 	github.com/docker/spdystream v0.0.0-20170912183627-bc6354cbbc29 // indirect
 	github.com/evanphx/json-patch v4.5.0+incompatible
+
 	github.com/go-ini/ini v1.28.2 // indirect
 	github.com/gobwas/glob v0.2.3
 	github.com/gofrs/uuid v3.2.0+incompatible
