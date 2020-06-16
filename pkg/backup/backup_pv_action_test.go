@@ -24,10 +24,10 @@ import (
 	corev1api "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	v1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/kuberesource"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	velerotest "github.com/vmware-tanzu/velero/pkg/test"
+	v1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/kuberesource"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	velerotest "github.com/velann21/velero/pkg/test"
 )
 
 func TestBackupPVAction(t *testing.T) {

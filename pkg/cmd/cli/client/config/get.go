@@ -22,8 +22,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd"
 )
 
 func NewGetCommand() *cobra.Command {

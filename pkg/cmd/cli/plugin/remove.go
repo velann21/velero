@@ -25,8 +25,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd"
 )
 
 func NewRemoveCommand(f client.Factory) *cobra.Command {

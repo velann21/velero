@@ -23,7 +23,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/vmware-tanzu/velero/pkg/plugin/framework"
+	"github.com/velann21/velero/pkg/plugin/framework"
 )
 
 type mockClientProtocol struct {

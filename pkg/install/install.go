@@ -33,8 +33,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/wait"
 
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/util/kube"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/util/kube"
 )
 
 // kindToResource translates a Kind (mixed case, singular) to a Resource (lowercase, plural) string.

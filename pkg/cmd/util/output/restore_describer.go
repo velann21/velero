@@ -25,10 +25,10 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	v1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/cmd/util/downloadrequest"
-	clientset "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned"
-	pkgrestore "github.com/vmware-tanzu/velero/pkg/restore"
+	v1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/cmd/util/downloadrequest"
+	clientset "github.com/velann21/velero/pkg/generated/clientset/versioned"
+	pkgrestore "github.com/velann21/velero/pkg/restore"
 )
 
 func DescribeRestore(restore *v1.Restore, podVolumeRestores []v1.PodVolumeRestore, details bool, veleroClient clientset.Interface, insecureSkipTLSVerify bool, caCertFile string) string {

@@ -29,13 +29,13 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/client-go/kubernetes"
 
-	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/features"
-	velerov1client "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/typed/velero/v1"
-	velerov1listers "github.com/vmware-tanzu/velero/pkg/generated/listers/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/label"
-	"github.com/vmware-tanzu/velero/pkg/persistence"
-	"github.com/vmware-tanzu/velero/pkg/plugin/clientmgmt"
+	velerov1api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/features"
+	velerov1client "github.com/velann21/velero/pkg/generated/clientset/versioned/typed/velero/v1"
+	velerov1listers "github.com/velann21/velero/pkg/generated/listers/velero/v1"
+	"github.com/velann21/velero/pkg/label"
+	"github.com/velann21/velero/pkg/persistence"
+	"github.com/velann21/velero/pkg/plugin/clientmgmt"
 )
 
 type backupSyncController struct {

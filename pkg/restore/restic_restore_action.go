@@ -28,15 +28,15 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	corev1client "k8s.io/client-go/kubernetes/typed/core/v1"
 
-	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/builder"
-	"github.com/vmware-tanzu/velero/pkg/buildinfo"
-	velerov1client "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/typed/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/label"
-	"github.com/vmware-tanzu/velero/pkg/plugin/framework"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	"github.com/vmware-tanzu/velero/pkg/restic"
-	"github.com/vmware-tanzu/velero/pkg/util/kube"
+	velerov1api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/builder"
+	"github.com/velann21/velero/pkg/buildinfo"
+	velerov1client "github.com/velann21/velero/pkg/generated/clientset/versioned/typed/velero/v1"
+	"github.com/velann21/velero/pkg/label"
+	"github.com/velann21/velero/pkg/plugin/framework"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	"github.com/velann21/velero/pkg/restic"
+	"github.com/velann21/velero/pkg/util/kube"
 )
 
 const (

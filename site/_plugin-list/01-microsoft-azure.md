@@ -1,6 +1,6 @@
 ---
 title: Microsoft Azure
-link: https://github.com/vmware-tanzu/velero-plugin-for-microsoft-azure
+link: https://github.com/velann21/velero-plugin-for-microsoft-azure
 object-storage: true
 volumesnapshotter: true
 supported-by-velero-team: true

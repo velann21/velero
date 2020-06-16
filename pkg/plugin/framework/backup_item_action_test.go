@@ -28,11 +28,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	v1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/backup/mocks"
-	proto "github.com/vmware-tanzu/velero/pkg/plugin/generated"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	velerotest "github.com/vmware-tanzu/velero/pkg/test"
+	v1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/backup/mocks"
+	proto "github.com/velann21/velero/pkg/plugin/generated"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	velerotest "github.com/velann21/velero/pkg/test"
 )
 
 func TestBackupItemActionGRPCServerExecute(t *testing.T) {

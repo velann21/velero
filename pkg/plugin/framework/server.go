@@ -25,8 +25,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/pflag"
 
-	veleroflag "github.com/vmware-tanzu/velero/pkg/cmd/util/flag"
-	"github.com/vmware-tanzu/velero/pkg/util/logging"
+	veleroflag "github.com/velann21/velero/pkg/cmd/util/flag"
+	"github.com/velann21/velero/pkg/util/logging"
 )
 
 // Server serves registered plugin implementations.

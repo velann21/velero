@@ -35,18 +35,18 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	core "k8s.io/client-go/testing"
 
-	velerov1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	pkgbackup "github.com/vmware-tanzu/velero/pkg/backup"
-	"github.com/vmware-tanzu/velero/pkg/builder"
-	"github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/fake"
-	informers "github.com/vmware-tanzu/velero/pkg/generated/informers/externalversions"
-	"github.com/vmware-tanzu/velero/pkg/metrics"
-	"github.com/vmware-tanzu/velero/pkg/persistence"
-	persistencemocks "github.com/vmware-tanzu/velero/pkg/persistence/mocks"
-	"github.com/vmware-tanzu/velero/pkg/plugin/clientmgmt"
-	pluginmocks "github.com/vmware-tanzu/velero/pkg/plugin/mocks"
-	velerotest "github.com/vmware-tanzu/velero/pkg/test"
-	"github.com/vmware-tanzu/velero/pkg/volume"
+	velerov1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	pkgbackup "github.com/velann21/velero/pkg/backup"
+	"github.com/velann21/velero/pkg/builder"
+	"github.com/velann21/velero/pkg/generated/clientset/versioned/fake"
+	informers "github.com/velann21/velero/pkg/generated/informers/externalversions"
+	"github.com/velann21/velero/pkg/metrics"
+	"github.com/velann21/velero/pkg/persistence"
+	persistencemocks "github.com/velann21/velero/pkg/persistence/mocks"
+	"github.com/velann21/velero/pkg/plugin/clientmgmt"
+	pluginmocks "github.com/velann21/velero/pkg/plugin/mocks"
+	velerotest "github.com/velann21/velero/pkg/test"
+	"github.com/velann21/velero/pkg/volume"
 )
 
 func TestBackupDeletionControllerProcessQueueItem(t *testing.T) {
@@ -472,7 +472,7 @@ func TestBackupDeletionControllerProcessRequest(t *testing.T) {
 
 		// Clear out req labels to make sure the controller adds them and does not
 		// panic when encountering a nil Labels map
-		// (https://github.com/vmware-tanzu/velero/issues/1546)
+		// (https://github.com/velann21/velero/issues/1546)
 		td.req.Labels = nil
 
 		td.client.PrependReactor("get", "backups", func(action core.Action) (bool, runtime.Object, error) {

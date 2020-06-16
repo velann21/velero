@@ -25,8 +25,8 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 
-	v1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	clientset "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned"
+	v1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	clientset "github.com/velann21/velero/pkg/generated/clientset/versioned"
 )
 
 // Factory knows how to create a VeleroClient and Kubernetes client.
@@ -87,6 +87,27 @@ func NewFactory(baseName string, config VeleroConfig) Factory {
 	f.flags.StringVar(&f.kubeconfig, "kubeconfig", "", "Path to the kubeconfig file to use to talk to the Kubernetes apiserver. If unset, try the environment variable KUBECONFIG, as well as in-cluster configuration")
 	f.flags.StringVarP(&f.namespace, "namespace", "n", f.namespace, "The namespace in which Velero should operate")
 	f.flags.StringVar(&f.kubecontext, "kubecontext", "", "The context to use to talk to the Kubernetes apiserver. If unset defaults to whatever your current-context is (kubectl config current-context)")
+
+	return f
+}
+
+func NewSDKFactory(baseName string, kubeconfig string, kubeContext string, veleroconfig VeleroConfig, namespace string) Factory {
+	f := &factory{
+		baseName: baseName,
+	}
+
+	if namespace != "" {
+		f.namespace = namespace
+	} else if veleroconfig.Namespace() != "" {
+		f.namespace = veleroconfig.Namespace()
+	} else if os.Getenv("VELERO_NAMESPACE") != "" {
+		f.namespace = os.Getenv("VELERO_NAMESPACE")
+	} else {
+		f.namespace = v1.DefaultNamespace
+	}
+    //Pass it as file path
+	f.kubeconfig = kubeconfig
+	f.kubecontext = kubeContext
 
 	return f
 }

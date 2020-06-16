@@ -96,7 +96,7 @@ _Note: if you're upgrading from v1.0, follow the [upgrading to v1.1][2] instruct
         Version: v1.2.0
     ```
 
-[0]: https://github.com/vmware-tanzu/velero/releases/tag/v1.1.0
-[1]: https://github.com/vmware-tanzu/velero/releases/tag/v1.0.0
+[0]: https://github.com/velann21/velero/releases/tag/v1.1.0
+[1]: https://github.com/velann21/velero/releases/tag/v1.0.0
 [2]: https://velero.io/docs/v1.1.0/upgrade-to-1.1/
 [3]: basic-install.md#install-the-cli

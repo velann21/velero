@@ -19,10 +19,10 @@ package describe
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/backup"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/restore"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/schedule"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd/cli/backup"
+	"github.com/velann21/velero/pkg/cmd/cli/restore"
+	"github.com/velann21/velero/pkg/cmd/cli/schedule"
 )
 
 func NewCommand(f client.Factory) *cobra.Command {

@@ -1,6 +1,6 @@
 ---
 title: Google Cloud Platform (GCP)
-link: https://github.com/vmware-tanzu/velero-plugin-for-gcp
+link: https://github.com/velann21/velero-plugin-for-gcp
 object-storage: true
 volumesnapshotter: true
 supported-by-velero-team: true

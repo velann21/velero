@@ -17,13 +17,14 @@ limitations under the License.
 package backup
 
 import (
+	"fmt"
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd"
-	"github.com/vmware-tanzu/velero/pkg/cmd/util/output"
+	api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd"
+	"github.com/velann21/velero/pkg/cmd/util/output"
 )
 
 func NewGetCommand(f client.Factory, use string) *cobra.Command {
@@ -62,4 +63,27 @@ func NewGetCommand(f client.Factory, use string) *cobra.Command {
 	output.BindFlags(c.Flags())
 
 	return c
+}
+
+func GetBackupFunction(f client.Factory, args []string, listOptions metav1.ListOptions){
+	veleroClient, err := f.Client()
+	cmd.CheckError(err)
+	var backups *api.BackupList
+	if len(args) > 0 {
+		backups = new(api.BackupList)
+		for _, name := range args {
+			backup, err := veleroClient.VeleroV1().Backups(f.Namespace()).Get(name, metav1.GetOptions{})
+			cmd.CheckError(err)
+			backups.Items = append(backups.Items, *backup)
+		}
+	} else {
+		backups, err = veleroClient.VeleroV1().Backups(f.Namespace()).List(listOptions)
+		cmd.CheckError(err)
+	}
+
+	for _, v := range backups.Items{
+		status := v.Status
+		fmt.Println(status.Phase)
+	}
+	cmd.CheckError(err)
 }

@@ -26,9 +26,9 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	"github.com/vmware-tanzu/velero/pkg/test"
+	api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	"github.com/velann21/velero/pkg/test"
 )
 
 func TestClusterRoleBindingActionAppliesTo(t *testing.T) {

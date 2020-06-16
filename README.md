@@ -33,10 +33,10 @@ If you are ready to jump in and test, add code, or help with documentation, foll
 
 See [the list of releases][6] to find out about feature changes.
 
-[1]: https://github.com/vmware-tanzu/velero/workflows/Master%20CI/badge.svg
-[2]: https://github.com/vmware-tanzu/velero/actions?query=workflow%3A"Master+CI"
-[4]: https://github.com/vmware-tanzu/velero/issues
-[6]: https://github.com/vmware-tanzu/velero/releases
+[1]: https://github.com/velann21/velero/workflows/Master%20CI/badge.svg
+[2]: https://github.com/velann21/velero/actions?query=workflow%3A"Master+CI"
+[4]: https://github.com/velann21/velero/issues
+[6]: https://github.com/velann21/velero/releases
 [9]: https://kubernetes.io/docs/setup/
 [10]: https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos
 [11]: https://kubernetes.io/docs/tasks/tools/install-kubectl/#tabset-1

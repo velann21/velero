@@ -22,11 +22,11 @@ import (
 
 	apiextensions "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 
-	"github.com/vmware-tanzu/velero/pkg/backup"
-	"github.com/vmware-tanzu/velero/pkg/client"
-	velerodiscovery "github.com/vmware-tanzu/velero/pkg/discovery"
-	veleroplugin "github.com/vmware-tanzu/velero/pkg/plugin/framework"
-	"github.com/vmware-tanzu/velero/pkg/restore"
+	"github.com/velann21/velero/pkg/backup"
+	"github.com/velann21/velero/pkg/client"
+	velerodiscovery "github.com/velann21/velero/pkg/discovery"
+	veleroplugin "github.com/velann21/velero/pkg/plugin/framework"
+	"github.com/velann21/velero/pkg/restore"
 )
 
 func NewCommand(f client.Factory) *cobra.Command {
