@@ -23,9 +23,9 @@ import (
 	"golang.org/x/net/context"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	proto "github.com/vmware-tanzu/velero/pkg/plugin/generated"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
+	api "github.com/velann21/velero/pkg/apis/velero/v1"
+	proto "github.com/velann21/velero/pkg/plugin/generated"
+	"github.com/velann21/velero/pkg/plugin/velero"
 )
 
 // BackupItemActionGRPCServer implements the proto-generated BackupItemAction interface, and accepts

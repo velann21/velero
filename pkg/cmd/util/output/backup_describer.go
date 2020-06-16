@@ -27,11 +27,11 @@ import (
 
 	snapshotv1beta1api "github.com/kubernetes-csi/external-snapshotter/v2/pkg/apis/volumesnapshot/v1beta1"
 
-	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/cmd/util/downloadrequest"
-	"github.com/vmware-tanzu/velero/pkg/features"
-	clientset "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned"
-	"github.com/vmware-tanzu/velero/pkg/volume"
+	velerov1api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/cmd/util/downloadrequest"
+	"github.com/velann21/velero/pkg/features"
+	clientset "github.com/velann21/velero/pkg/generated/clientset/versioned"
+	"github.com/velann21/velero/pkg/volume"
 )
 
 // DescribeBackup describes a backup in human-readable format.

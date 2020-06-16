@@ -24,27 +24,27 @@ import (
 	"github.com/spf13/cobra"
 	"k8s.io/klog"
 
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/backup"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/backuplocation"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/bug"
-	cliclient "github.com/vmware-tanzu/velero/pkg/cmd/cli/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/completion"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/create"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/delete"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/describe"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/get"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/install"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/plugin"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/restic"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/restore"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/schedule"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/snapshotlocation"
-	"github.com/vmware-tanzu/velero/pkg/cmd/cli/version"
-	"github.com/vmware-tanzu/velero/pkg/cmd/server"
-	runplugin "github.com/vmware-tanzu/velero/pkg/cmd/server/plugin"
-	veleroflag "github.com/vmware-tanzu/velero/pkg/cmd/util/flag"
-	"github.com/vmware-tanzu/velero/pkg/features"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd/cli/backup"
+	"github.com/velann21/velero/pkg/cmd/cli/backuplocation"
+	"github.com/velann21/velero/pkg/cmd/cli/bug"
+	cliclient "github.com/velann21/velero/pkg/cmd/cli/client"
+	"github.com/velann21/velero/pkg/cmd/cli/completion"
+	"github.com/velann21/velero/pkg/cmd/cli/create"
+	"github.com/velann21/velero/pkg/cmd/cli/delete"
+	"github.com/velann21/velero/pkg/cmd/cli/describe"
+	"github.com/velann21/velero/pkg/cmd/cli/get"
+	"github.com/velann21/velero/pkg/cmd/cli/install"
+	"github.com/velann21/velero/pkg/cmd/cli/plugin"
+	"github.com/velann21/velero/pkg/cmd/cli/restic"
+	"github.com/velann21/velero/pkg/cmd/cli/restore"
+	"github.com/velann21/velero/pkg/cmd/cli/schedule"
+	"github.com/velann21/velero/pkg/cmd/cli/snapshotlocation"
+	"github.com/velann21/velero/pkg/cmd/cli/version"
+	"github.com/velann21/velero/pkg/cmd/server"
+	runplugin "github.com/velann21/velero/pkg/cmd/server/plugin"
+	veleroflag "github.com/velann21/velero/pkg/cmd/util/flag"
+	"github.com/velann21/velero/pkg/features"
 )
 
 func NewCommand(name string) *cobra.Command {
@@ -77,7 +77,7 @@ operations can also be performed as 'velero backup get' and 'velero schedule cre
 		},
 	}
 
-	f := client.NewFactory(name, config)
+	f := client.NewFactory("backup", config)
 	f.BindFlags(c.PersistentFlags())
 
 	// Bind features directly to the root command so it's available to all callers.

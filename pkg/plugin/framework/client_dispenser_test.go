@@ -22,7 +22,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 
-	"github.com/vmware-tanzu/velero/pkg/test"
+	"github.com/velann21/velero/pkg/test"
 )
 
 type fakeClient struct {

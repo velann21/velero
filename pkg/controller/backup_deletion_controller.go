@@ -36,19 +36,19 @@ import (
 	kubeerrs "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/client-go/tools/cache"
 
-	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	pkgbackup "github.com/vmware-tanzu/velero/pkg/backup"
-	"github.com/vmware-tanzu/velero/pkg/features"
-	velerov1client "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/typed/velero/v1"
-	velerov1informers "github.com/vmware-tanzu/velero/pkg/generated/informers/externalversions/velero/v1"
-	velerov1listers "github.com/vmware-tanzu/velero/pkg/generated/listers/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/label"
-	"github.com/vmware-tanzu/velero/pkg/metrics"
-	"github.com/vmware-tanzu/velero/pkg/persistence"
-	"github.com/vmware-tanzu/velero/pkg/plugin/clientmgmt"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	"github.com/vmware-tanzu/velero/pkg/restic"
-	"github.com/vmware-tanzu/velero/pkg/util/kube"
+	velerov1api "github.com/velann21/velero/pkg/apis/velero/v1"
+	pkgbackup "github.com/velann21/velero/pkg/backup"
+	"github.com/velann21/velero/pkg/features"
+	velerov1client "github.com/velann21/velero/pkg/generated/clientset/versioned/typed/velero/v1"
+	velerov1informers "github.com/velann21/velero/pkg/generated/informers/externalversions/velero/v1"
+	velerov1listers "github.com/velann21/velero/pkg/generated/listers/velero/v1"
+	"github.com/velann21/velero/pkg/label"
+	"github.com/velann21/velero/pkg/metrics"
+	"github.com/velann21/velero/pkg/persistence"
+	"github.com/velann21/velero/pkg/plugin/clientmgmt"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	"github.com/velann21/velero/pkg/restic"
+	"github.com/velann21/velero/pkg/util/kube"
 )
 
 const resticTimeout = time.Minute
@@ -200,6 +200,7 @@ func (c *backupDeletionController) processRequest(req *velerov1api.DeleteBackupR
 
 	// Get the backup we're trying to delete
 	backup, err := c.backupClient.Backups(req.Namespace).Get(req.Spec.BackupName, metav1.GetOptions{})
+
 	if apierrors.IsNotFound(err) {
 		// Couldn't find backup - update status to Processed and record the not-found error
 		req, err = c.patchDeleteBackupRequest(req, func(r *velerov1api.DeleteBackupRequest) {

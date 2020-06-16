@@ -25,9 +25,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/vmware-tanzu/velero/pkg/features"
-	"github.com/vmware-tanzu/velero/pkg/plugin/framework"
-	"github.com/vmware-tanzu/velero/pkg/test"
+	"github.com/velann21/velero/pkg/features"
+	"github.com/velann21/velero/pkg/plugin/framework"
+	"github.com/velann21/velero/pkg/test"
 )
 
 func TestNewClientBuilder(t *testing.T) {

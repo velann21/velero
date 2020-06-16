@@ -41,17 +41,17 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	velerov1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/builder"
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/discovery"
-	"github.com/vmware-tanzu/velero/pkg/kuberesource"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
-	"github.com/vmware-tanzu/velero/pkg/restic"
-	"github.com/vmware-tanzu/velero/pkg/test"
-	testutil "github.com/vmware-tanzu/velero/pkg/test"
-	kubeutil "github.com/vmware-tanzu/velero/pkg/util/kube"
-	"github.com/vmware-tanzu/velero/pkg/volume"
+	velerov1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/builder"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/discovery"
+	"github.com/velann21/velero/pkg/kuberesource"
+	"github.com/velann21/velero/pkg/plugin/velero"
+	"github.com/velann21/velero/pkg/restic"
+	"github.com/velann21/velero/pkg/test"
+	testutil "github.com/velann21/velero/pkg/test"
+	kubeutil "github.com/velann21/velero/pkg/util/kube"
+	"github.com/velann21/velero/pkg/volume"
 )
 
 func TestBackedUpItemsMatchesTarballContents(t *testing.T) {
@@ -994,7 +994,7 @@ func TestBackupResourceCohabitation(t *testing.T) {
 // TestBackupUsesNewCohabitatingResourcesForEachBackup ensures that when two backups are
 // run that each include cohabitating resources, one copy of the relevant resources is
 // backed up in each backup. Verification is done by looking at the contents of the backup
-// tarball. This covers a specific issue that was fixed by https://github.com/vmware-tanzu/velero/pull/485.
+// tarball. This covers a specific issue that was fixed by https://github.com/velann21/velero/pull/485.
 func TestBackupUsesNewCohabitatingResourcesForEachBackup(t *testing.T) {
 	h := newHarness(t)
 

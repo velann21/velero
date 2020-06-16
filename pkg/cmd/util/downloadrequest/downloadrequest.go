@@ -31,8 +31,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 
-	v1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	velerov1client "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/typed/velero/v1"
+	v1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	velerov1client "github.com/velann21/velero/pkg/generated/clientset/versioned/typed/velero/v1"
 )
 
 // ErrNotFound is exported for external packages to check for when a file is
@@ -126,7 +126,7 @@ Loop:
 		},
 		IdleConnTimeout:       timeout,
 		DialContext:           defaultTransport.DialContext,
-		ForceAttemptHTTP2:     defaultTransport.ForceAttemptHTTP2,
+		//ForceAttemptHTTP2:     defaultTransport.ForceAttemptHTTP2,
 		MaxIdleConns:          defaultTransport.MaxIdleConns,
 		Proxy:                 defaultTransport.Proxy,
 		TLSHandshakeTimeout:   defaultTransport.TLSHandshakeTimeout,

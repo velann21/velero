@@ -29,13 +29,13 @@ import (
 	"github.com/spf13/pflag"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/client"
-	"github.com/vmware-tanzu/velero/pkg/cmd"
-	"github.com/vmware-tanzu/velero/pkg/cmd/util/flag"
-	"github.com/vmware-tanzu/velero/pkg/cmd/util/output"
-	"github.com/vmware-tanzu/velero/pkg/install"
-	kubeutil "github.com/vmware-tanzu/velero/pkg/util/kube"
+	velerov1api "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/client"
+	"github.com/velann21/velero/pkg/cmd"
+	"github.com/velann21/velero/pkg/cmd/util/flag"
+	"github.com/velann21/velero/pkg/cmd/util/output"
+	"github.com/velann21/velero/pkg/install"
+	kubeutil "github.com/velann21/velero/pkg/util/kube"
 )
 
 // InstallOptions collects all the options for installing Velero into a Kubernetes cluster.

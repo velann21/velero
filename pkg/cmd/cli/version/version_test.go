@@ -25,11 +25,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	velerov1 "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
-	"github.com/vmware-tanzu/velero/pkg/builder"
-	"github.com/vmware-tanzu/velero/pkg/buildinfo"
-	"github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/fake"
-	v1 "github.com/vmware-tanzu/velero/pkg/generated/clientset/versioned/typed/velero/v1"
+	velerov1 "github.com/velann21/velero/pkg/apis/velero/v1"
+	"github.com/velann21/velero/pkg/builder"
+	"github.com/velann21/velero/pkg/buildinfo"
+	"github.com/velann21/velero/pkg/generated/clientset/versioned/fake"
+	v1 "github.com/velann21/velero/pkg/generated/clientset/versioned/typed/velero/v1"
 )
 
 func TestPrintVersion(t *testing.T) {

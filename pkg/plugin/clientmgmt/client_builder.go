@@ -25,8 +25,8 @@ import (
 	hcplugin "github.com/hashicorp/go-plugin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/vmware-tanzu/velero/pkg/features"
-	"github.com/vmware-tanzu/velero/pkg/plugin/framework"
+	"github.com/velann21/velero/pkg/features"
+	"github.com/velann21/velero/pkg/plugin/framework"
 )
 
 // clientBuilder builds go-plugin Clients.

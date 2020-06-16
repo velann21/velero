@@ -22,8 +22,8 @@ import (
 	corev1api "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/vmware-tanzu/velero/pkg/kuberesource"
-	"github.com/vmware-tanzu/velero/pkg/plugin/velero"
+	"github.com/velann21/velero/pkg/kuberesource"
+	"github.com/velann21/velero/pkg/plugin/velero"
 )
 
 type AddPVCFromPodAction struct {

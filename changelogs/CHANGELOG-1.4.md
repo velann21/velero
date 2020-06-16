@@ -2,7 +2,7 @@
 ### 2020-05-26
 
 ### Download
-https://github.com/vmware-tanzu/velero/releases/tag/v1.4.0
+https://github.com/velann21/velero/releases/tag/v1.4.0
 
 ### Container Image
 `velero/velero:v1.4.0`

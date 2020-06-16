@@ -1,6 +1,6 @@
 ---
 title: VMware vSphere
-link: https://github.com/vmware-tanzu/velero-plugin-for-vsphere
+link: https://github.com/velann21/velero-plugin-for-vsphere
 object-storage: false
 volumesnapshotter: true
 local-storage: true
