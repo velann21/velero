@@ -16,7 +16,7 @@ require (
 	github.com/go-ini/ini v1.28.2 // indirect
 	github.com/gobwas/glob v0.2.3
 	github.com/gofrs/uuid v3.2.0+incompatible
-	github.com/golang/protobuf v1.3.2
+	github.com/golang/protobuf v1.3.4
 	github.com/hashicorp/go-hclog v0.0.0-20180709165350-ff2cf002a8dd
 	github.com/hashicorp/go-plugin v0.0.0-20190610192547-a1bc61569a26
 	github.com/jmespath/go-jmespath v0.0.0-20160202185014-0b12d6b521d8 // indirect
@@ -44,4 +44,4 @@ require (
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.27.0
+replace google.golang.org/grpc v1.26.0 => google.golang.org/grpc v1.27.0
