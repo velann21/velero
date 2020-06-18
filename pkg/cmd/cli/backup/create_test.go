@@ -134,38 +134,3 @@ func Test_GetBackup(t *testing.T){
 	listOptions := metav1.ListOptions{}
     GetBackupFunction(f, args, listOptions)
 }
-
-
-
-
-//c := &cobra.Command{
-//	Use:   "create",
-//	Short: "Create a backup",
-//	Args:  cobra.MaximumNArgs(1),
-//	Example: `	# create a backup containing all resources
-//velero backup create backup1
-//
-//# create a backup including only the nginx namespace
-//velero backup create nginx-backup --include-namespaces nginx
-//
-//# create a backup excluding the velero and default namespaces
-//velero backup create backup2 --exclude-namespaces velero,default
-//
-//# create a backup based on a schedule named daily-backup
-//velero backup create --from-schedule daily-backup
-//
-//# view the YAML for a backup that doesn't snapshot volumes, without sending it to the server
-//velero backup create backup3 --snapshot-volumes=false -o yaml
-//
-//# wait for a backup to complete before returning from the command
-//velero backup create backup4 --wait`,
-//}
-//err = o.Validate(c, nil, f)
-//if err != nil{
-//
-//}
-//
-//err = o.Run(c, f)
-//if err != nil{
-//
-//}
