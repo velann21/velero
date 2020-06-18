@@ -67,7 +67,6 @@ func NewGetCommand(f client.Factory, use string) *cobra.Command {
 
 func GetBackupFunction(f client.Factory, args []string, listOptions metav1.ListOptions){
 	veleroClient, err := f.Client()
-	cmd.CheckError(err)
 	var backups *api.BackupList
 	if len(args) > 0 {
 		backups = new(api.BackupList)

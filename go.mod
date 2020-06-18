@@ -32,7 +32,7 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.4.0
 	golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553
-	google.golang.org/grpc v1.26.0
+	google.golang.org/grpc v1.27.0
 	k8s.io/api v0.17.4
 	k8s.io/apiextensions-apiserver v0.17.4
 	k8s.io/apimachinery v0.17.4
@@ -41,3 +41,7 @@ require (
 	k8s.io/klog v1.0.0
 	k8s.io/utils v0.0.0-20191218082557-f07c713de883 // indirect
 )
+
+replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
+
+replace google.golang.org/grpc => google.golang.org/grpc v1.27.0

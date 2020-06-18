@@ -135,6 +135,10 @@ func Test_GetBackup(t *testing.T){
     GetBackupFunction(f, args, listOptions)
 }
 
+func Test_DeleteBackup(){
+
+}
+
 
 
 //c := &cobra.Command{
