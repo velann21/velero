@@ -16,6 +16,7 @@ limitations under the License.
 package client
 
 import (
+	"fmt"
 	"os"
 	"testing"
 
@@ -34,7 +35,7 @@ func TestFactory(t *testing.T) {
 	f := NewFactory("velero", make(map[string]interface{}))
 
 	assert.Equal(t, "env-velero", f.Namespace())
-
+    fmt.Println("asdjsd")
 	os.Unsetenv("VELERO_NAMESPACE")
 
 	// Argument should change the namespace
